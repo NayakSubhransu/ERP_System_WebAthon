@@ -48,9 +48,17 @@ const Form = () => {
   const handleRateChange = (e, subject) => {
     setRates({ ...rates, [subject]: e.target.value });
   };
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("form submitted");
+    console.log("selectedSubject", selectedSubject);
+    console.log("selectedProfessor", selectedProfessor);
+    console.log("rates", rates);
+  }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
+      <h1>Feedback Form</h1>
       <label>
         Subject:
         <select onChange={handleSubjectChange}>
@@ -82,8 +90,9 @@ const Form = () => {
                 .find((subject) => subject.value === selectedSubject)
                 .subjects.map((subject) => (
                   <li key={subject.subject}>
-                    <label>
+                    <label id="ques">
                       Was the course {subject} Interesting?
+                      
                       <input type="radio" name="q1" />
                       <span>1</span>
                       <input type="radio" name="q1" />
@@ -98,21 +107,21 @@ const Form = () => {
                     <br></br>
                     <label>
                       Was the professor {selectedProfessor} teaching well?
-                      <input type="radio" name="q2" />
+                      <input id="q2" type="radio" name="q2" />
                       <span>1</span>
-                      <input type="radio" name="q2" />
+                      <input id="q2" type="radio" name="q2" />
                       <span>2</span>
-                      <input type="radio" name="q2" />
+                      <input id="q2" type="radio" name="q2" />
                       <span>3</span>
-                      <input type="radio" name="q2" />
+                      <input id="q2" type="radio" name="q2" />
                       <span>4</span>
-                      <input type="radio" name="q2" />
+                      <input id="q2" type="radio" name="q2" />
                       <span>5</span>
                     </label>
                     <br />
                     <label>
                       Was the course {subject} useful?
-                      <input type="radio" name={subject} />
+                      <input type="radio" name="q3" />
                       <span>1</span>
                       <input type="radio" name="q3" />
                       <span>2</span>
@@ -126,15 +135,15 @@ const Form = () => {
                     <br />
                     <label>
                       Should the course {subject} be continued?
-                      <input type="radio" name="q4" />
+                      <input id="q4" type="radio" name="q4" />
                       <span>1</span>
-                      <input type="radio" name="q4" />
+                      <input id="q4" type="radio" name="q4" />
                       <span>2</span>
-                      <input type="radio" name="q4" />
+                      <input id="q4" type="radio" name="q4" />
                       <span>3</span>
-                      <input type="radio" name="q4" />
+                      <input id="q4" type="radio" name="q4" />
                       <span>4</span>
-                      <input type="radio" name="q4" />
+                      <input id="q4" type="radio" name="q4" />
                       <span>5</span>
                     </label>
                   </li>
