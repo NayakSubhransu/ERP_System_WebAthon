@@ -44,16 +44,27 @@ const Form = () => {
     newRates[selectedSubject] = 0;
     setRates(newRates);
   };
+  const [formData, setFormData] = useState({
+    q1: "",
+    q2: "",
+    q3: "",
+    q4: "",
+    additionalFeedback: "",
+  });
 
-  const handleRateChange = (e, subject) => {
-    setRates({ ...rates, [subject]: e.target.value });
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log("form submitted");
     console.log("selectedSubject", selectedSubject);
     console.log("selectedProfessor", selectedProfessor);
-    console.log("rates", rates);
+    console.log("formData", formData);
   }
 
   return (
@@ -71,7 +82,7 @@ const Form = () => {
       </label>
       <label>
         Professor:
-        <select
+        <select required
           onChange={handleProfessorChange}
           disabled={selectedSubject === ""}
         >
@@ -90,61 +101,170 @@ const Form = () => {
                 .find((subject) => subject.value === selectedSubject)
                 .subjects.map((subject) => (
                   <li key={subject.subject}>
-                    <label id="ques">
+                    <label>
                       Was the course {subject} Interesting?
-                      
-                      <input type="radio" name="q1" />
-                      <span>1</span>
-                      <input type="radio" name="q1" />
-                      <span>2</span>
-                      <input type="radio" name="q1" />
-                      <span>3</span>
-                      <input type="radio" name="q1" />
-                      <span>4</span>
-                      <input type="radio" name="q1" />
-                      <span>5</span>
+                      <input
+                        type="radio"
+                        name="q1"
+                        value="Very Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Very Bad</span>
+                      <input
+                        type="radio"
+                        name="q1"
+                        value="Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Bad</span>
+                      <input
+                        type="radio"
+                        name="q1"
+                        value="Neutral"
+                        onChange={handleChange}
+                      />
+                      <span>Neutral</span>
+                      <input
+                        type="radio"
+                        name="q1"
+                        value="Good"
+                        onChange={handleChange}
+                      />
+                      <span>Good</span>
+                      <input
+                        type="radio"
+                        name="q1"
+                        value="Very Good"
+                        onChange={handleChange}
+                      />
+                      <span>Very Good</span>
                     </label>
-                    <br></br>
+                    <br />
                     <label>
                       Was the professor {selectedProfessor} teaching well?
-                      <input id="q2" type="radio" name="q2" />
-                      <span>1</span>
-                      <input id="q2" type="radio" name="q2" />
-                      <span>2</span>
-                      <input id="q2" type="radio" name="q2" />
-                      <span>3</span>
-                      <input id="q2" type="radio" name="q2" />
-                      <span>4</span>
-                      <input id="q2" type="radio" name="q2" />
-                      <span>5</span>
+                      <input
+                      id="q2"
+                        type="radio"
+                        name="q2"
+                        value="Very Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Very Bad</span>
+                      <input
+                      id="q2"
+                        type="radio"
+                        name="q2"
+                        value="Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Bad</span>
+                      <input
+                      id="q2"
+                        type="radio"
+                        name="q2"
+                        value="Neutral"
+                        onChange={handleChange}
+                      />
+                      <span>Neutral</span>
+                      <input
+                      id="q2"
+                        type="radio"
+                        name="q2"
+                        value="Good"
+                        onChange={handleChange}
+                      />
+                      <span>Good</span>
+                      <input
+                      id="q2"
+                        type="radio"
+                        name="q2"
+                        value="Very Good"
+                        onChange={handleChange}
+                      />
+                      <span>Very Good</span>
                     </label>
                     <br />
                     <label>
                       Was the course {subject} useful?
-                      <input type="radio" name="q3" />
-                      <span>1</span>
-                      <input type="radio" name="q3" />
-                      <span>2</span>
-                      <input type="radio" name="q3" />
-                      <span>3</span>
-                      <input type="radio" name="q3" />
-                      <span>4</span>
-                      <input type="radio" name="q3" />
-                      <span>5</span>
+                      <input
+                        type="radio"
+                        name="q3"
+                        value="Very Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Very Bad</span>
+                      <input
+                        type="radio"
+                        name="q3"
+                        value="Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Bad</span>
+                      <input
+                        type="radio"
+                        name="q3"
+                        value="Neutral"
+                        onChange={handleChange}
+                      />
+                      <span>Neutral</span>
+                      <input
+                        type="radio"
+                        name="q3"
+                        value="Good"
+                        onChange={handleChange}
+                      />
+                      <span>Good</span>
+                      <input
+                        type="radio"
+                        name="q3"
+                        value="Very Good"
+                        onChange={handleChange}
+                      />
+                      <span>Very Good</span>
                     </label>
                     <br />
                     <label>
                       Should the course {subject} be continued?
-                      <input id="q4" type="radio" name="q4" />
-                      <span>1</span>
-                      <input id="q4" type="radio" name="q4" />
-                      <span>2</span>
-                      <input id="q4" type="radio" name="q4" />
-                      <span>3</span>
-                      <input id="q4" type="radio" name="q4" />
-                      <span>4</span>
-                      <input id="q4" type="radio" name="q4" />
-                      <span>5</span>
+                      <input
+                      id="q4"
+                        type="radio"
+                        name="q4"
+                        value="Very Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Very Bad</span>
+                      <input
+                      id="q4"
+                        type="radio"
+                        name="q4"
+                        value="Bad"
+                        onChange={handleChange}
+                      />
+                      <span>Bad</span>
+                      <input
+                      id="q4"
+                        type="radio"
+                        name="q4"
+                        value="Neutral"
+                        onChange={handleChange}
+                      />
+                      <span>Neutral</span>
+                      <input
+                      id="q4"
+                        type="radio"
+                        name="q4"
+                        value="Good"
+                        onChange={handleChange}
+                      />
+                      <span>Good</span>
+                      <input
+                      id="q4"
+                        type="radio"
+                        name="q4"
+                        value="Very Good"
+                        onChange={handleChange}
+                      />
+                      <span>Very Good</span>
                     </label>
                   </li>
                 ))}
@@ -152,9 +272,11 @@ const Form = () => {
           </li>
         )}
       </ul>
-      <textarea type="textarea" />
+      <label style={{fontWeight:"bold"}}>Additional Feedback</label>
+      <textarea type="textarea" name="additionalFeedback" onChange={handleChange}/>
       <br />
-      <button type="submit">Submit</button>
+      <button disabled={(selectedProfessor==="" || selectedProfessor==="Select Professor") || (selectedSubject==="Select Subject" || selectedSubject==="")} type="submit">Submit</button>
+      {(selectedProfessor==="" || selectedProfessor==="Select Professor" || selectedSubject==="Select Subject" || selectedSubject==="") ? <p style={{color:"red"}}>Please select a valid subject and professor</p> : null}
     </form>
   );
 };
