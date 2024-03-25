@@ -1,0 +1,40 @@
+/* UserProfileDialog.css adjustments for enhanced UI */
+.user-profile-dialog {
+  position: absolute;
+  top: 60px; /* Adjust to position below the user icon */
+  right: 20px; /* Right-aligned with the user icon */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Slightly larger radius for a modern look */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow for depth */
+  padding: 20px;
+  width: 220px; /* Optimized width for content */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items for a balanced look */
+}
+
+/* Button styling within the dialog */
+.user-profile-dialog button {
+  width: 100%; /* Full width for emphasis */
+  padding: 10px 0; /* Adequate padding for touch targets */
+  margin: 5px 0; /* Space between buttons */
+  border: none;
+  border-radius: 5px; /* Modern, subtle rounding */
+  background-color: #007bff; /* Primary color for action buttons */
+  color: white; /* Contrast for readability */
+  cursor: pointer;
+  font-size: 16px; /* Clear, legible text */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for feedback */
+}
+
+.user-profile-dialog button:hover {
+  background-color: #0056b3; /* Darker shade on hover for depth */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Last button margin adjustment */
+.user-profile-dialog button:last-child {
+  margin-bottom: 0;
+}

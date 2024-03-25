@@ -1,0 +1,198 @@
+/* 
+.equipment-admin {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-main {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+}
+
+.equipment-admin form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.equipment-admin input[type="text"],
+.equipment-admin input[type="number"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20px; 
+  transition: border 0.3s ease;
+}
+
+.equipment-admin input[type="text"]:focus,
+.equipment-admin input[type="number"]:focus {
+  border-color: #007bff; 
+  outline: none;
+}
+
+.equipment-admin button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.equipment-admin button:hover {
+  background-color: #0056b3; 
+  transform: translateY(-2px); 
+}
+
+.equipment-admin table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.equipment-admin th, .equipment-admin td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.equipment-admin th {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+}
+
+.equipment-admin tr:hover {
+  background-color: #f1f1f1; 
+}
+
+.equipment-admin td > button {
+  margin-right: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.equipment-admin td > button:hover {
+  opacity: 0.8;
+} */
+
+
+/* Base layout and styling */
+.equipment-admin {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f8f8f8;
+  border-radius: 18px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the 'Manage Equipment' title */
+.title-main {
+  font-size: 28px;
+  color: #1c232b; /* Dark, rich color for the title */
+  margin-bottom: 30px;
+  text-align: center;
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+/* Form styling */
+.equipment-admin form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 2px solid #403d3d;
+  background-color: #e7dede;
+  border-radius: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Enhanced input styles */
+.equipment-admin input[type="text"],
+.equipment-admin input[type="number"] {
+  width: 80%; /* Responsive width */
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Subtle rounded corners */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06); /* Inner shadow for a subtle depth */
+  transition: all 0.3s ease-in-out; /* Smooth transitions for border and shadow */
+}
+
+.equipment-admin input[type="text"]:focus,
+.equipment-admin input[type="number"]:focus {
+  border-color: #1c232b;
+  box-shadow: 0 0 0 2px rgba(30, 31, 32, 0.25);
+}
+
+/* Button styles */
+.equipment-admin button {
+  width: 40%; /* Adjusted button width */
+  padding: 15px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #2184ef; /* Brighter blue for more engagement */
+  border: none;
+  border-radius: 20px; /* More pronounced rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease, box-shadow 0.3s ease; /* Enhanced transitions for a dynamic feel */
+}
+
+.equipment-admin button:hover {
+  transform: translateY(-3px) scale(1.05); /* Noticeable lift and slight expansion */
+  background-color: #1a75d2; /* Slightly darker shade on hover */
+  box-shadow: 0 6px 12px rgba(0, 76, 152, 0.25); /* Increased shadow for a "floating" effect */
+}
+
+button:disabled {
+  background-color: #cccccc;
+}
+
+/* Table styling adjustments */
+.equipment-admin table {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #007bff;
+  padding: 10px;
+  border-collapse: collapse; /* Ensuring clean table layout */
+  transition: all 0.3s ease-in-out; /* Smooth transition for the table as well */
+}
+
+.equipment-admin th, .equipment-admin td {
+  padding: 15px;
+  text-align: left;
+}
+
+.equipment-admin tr:hover {
+  background-color: #dfefff; /* Subtle hover effect for table rows */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .equipment-admin form, .equipment-admin button {
+    width: 100%; /* Full width for mobile responsiveness */
+  }
+
+  .equipment-admin input[type="text"],
+  .equipment-admin input[type="number"] {
+    width: 90%; /* Slightly smaller width for inputs on mobile to maintain padding */
+  }
+
+  .title-main {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+}
+
+
+
+

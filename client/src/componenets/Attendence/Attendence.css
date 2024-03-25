@@ -1,0 +1,89 @@
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+   */
+
+
+   .attendance-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 60%; */
+  }
+  
+  .title {
+    margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Keeps the text from overflowing */
+  text-overflow: ellipsis; /* Adds an ellipsis if the text is too long to fit */
+  padding:2% 0 5% 60%
+  }
+  
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding-left: 60%;
+  }
+  
+  .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    background-color: #fff;
+  }
+  
+  .attendance-table th,
+  .attendance-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .attendance-table th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .attendance-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .attendance-table tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+  }
+  
+  /* Responsive Table */
+  @media screen and (max-width: 600px) {
+    .table-container {
+      width: 100%;
+    }
+
+    .title {
+      font-size: 16px; /* Smaller font size on smaller screens */
+      padding: 0 10px; /* Ensures padding doesn't force the text to wrap */
+    }
+  }
+  
+  /* .subs{
+    padding: 200px;
+  } */

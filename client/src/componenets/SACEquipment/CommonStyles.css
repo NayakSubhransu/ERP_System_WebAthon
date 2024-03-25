@@ -1,0 +1,196 @@
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #1c232b;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30, 31, 32, 0.25);
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+  }
+  
+  /* Adding hover effect for table rows */
+  table tr:hover {
+    background-color: #dfefff;
+  }
+  
+  /* Adding a nice padding and max-width for the whole app content */
+  .App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  /* Adding a subtle border and padding to the table for better readability */
+  table {
+    border: 1px solid #007bff;
+    padding: 10px;
+  }
+
+  button:hover {
+    background-color: #2184ef;
+  }
+  
+  
+  /* Style adjustments for better form visuals */
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 50px;
+    width: 800px;
+    border: 2px solid #403d3d;
+    margin-top: 20px;
+    background-color: #e7dede;
+    border-radius: 18px;
+    
+  }
+  
+  /* Style for success/error messages */
+  .message-success {
+    color: #28a745;
+  }
+  
+  .message-error {
+    color: #dc3545;
+  }
+  
+
+  .equipment-admin {
+    padding: 20px;
+  }
+  
+  .equipment-admin h2 {
+    margin-bottom: 20px;
+  }
+  
+  .equipment-admin form {
+    margin-bottom: 20px;
+  }
+  
+  .equipment-admin input[type="text"],
+  .equipment-admin input[type="number"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .equipment-admin button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add more styles for spacing, button colors, table layout, etc., to match your UI design */
+  
+  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    margin: 10px;
+    padding:5px;
+  }
+
+  .title-main {
+    font-size: 1.2rem;
+    width:100%;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-size: 2rem;
+  }
+}
+
+
+
+
+/* ----- */
+
+/* Enhanced input styles */
+/* Base styling adjustments for overall consistency */
+body, h2, form {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.form-equipment, .main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+/* .main{
+  margin: 10px auto;
+  
+} */
+
+.title-main {
+  font-size: 24px;
+  color: #0056b3; /* Enhanced color for the title */
+  margin-bottom: 30px; /* Increased gap */
+  /* text-align: center; */
+}
+
+/* Input styling for enhanced visual appeal */
+input[type="text"] {
+  width: calc(100% - 24px); /* Adjust width for padding */
+  padding: 12px;
+  margin-bottom: 25px; /* Increased gap between components */
+  border: 2px solid #ccc; /* Slight increase in border thickness */
+  border-radius: 8px; /* Subtle rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Refined shadow */
+  font-size: 16px; /* Larger font size for better readability */
+  transition: border 0.3s ease, box-shadow 0.3s ease; /* Smoother transitions */
+}
+
+input[type="text"]:focus {
+  border-color: #1a1f24; /* Brighter border color on focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 96, 125, 0.25); /* Focus shadow */
+}
+
+/* Button styling for a more dynamic interaction */
+button {
+  width: 40%;
+  padding: 15px 20px;
+ 
+  font-size: 24px; 
+   letter-spacing: 1.5px;
+  color: white;
+  justify-items:center;
+  background-color: #007bff; /* Vibrant button color */
+  border: none;
+  border-radius: 8px; /* Subtle rounded corners */
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  transition: background-color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              transform 0.2s ease; /* High-quality transitions */
+}
+
+button:hover {
+  background-color: #0056b3; /* Slightly darker shade on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+button:active {
+  transform: scale(1.1); /* Slight shrink effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive adjustments for a consistent experience across devices */
+@media (max-width: 768px) {
+  .main {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .title-main {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+}

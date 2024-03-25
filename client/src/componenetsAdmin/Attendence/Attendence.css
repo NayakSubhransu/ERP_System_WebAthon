@@ -1,0 +1,93 @@
+/* General padding and margin for the container */
+
+.main{
+
+    text-align: center;
+    white-space: nowrap; /* Prevents the text from wrapping */
+    padding:2% 1% 5% 15%
+    /* margin: 20px; */
+
+}
+
+.title-main{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 2px solid #000;
+    border-radius: 15px; /* Add border radius */
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: #c7b399; /* Add light brown background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+
+.dropdown-section, .submit-section {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
+}
+
+table {
+  width: 100%;
+  margin-top: 40px;
+
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+    background-color: #b8b3b3;
+}
+
+tr:nth-child(odd) {
+  background-color: #f7f0f0;
+}
+
+tr:nth-child(even) {
+    background-color: #ebdddd;
+  }
+
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 10px; /* Adjust the radius as needed */
+  }
+
+
+
+.submit-section button {
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out; 
+}
+
+.submit-section button:hover {
+  background-color: #14921b;
+  font-weight: 400;
+  /* transition: .5s ease-in; */
+  transform: scale(1.05); 
+}
+
+
+.dropdown-section .css-yk16xz-control, .dropdown-section .css-1pahdxg-control {
+  width: 200px;
+}
