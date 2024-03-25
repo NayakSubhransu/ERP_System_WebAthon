@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Feedback.css";
+import FeedbackStyle from "./Feedback.module.css";
 const subjects = [
   {
     label: "Select Subject",
