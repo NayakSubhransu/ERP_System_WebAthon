@@ -68,11 +68,11 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={FeedbackStyle.form}>
       <h1>Feedback Form</h1>
-      <label>
+      <label className={FeedbackStyle.label}>
         Subject:
-        <select onChange={handleSubjectChange}>
+        <select className={FeedbackStyle.select} onChange={handleSubjectChange}>
           {subjects.map((subject, index) => (
             <option key={index} value={subject.value}>
               {subject.label}
@@ -80,9 +80,9 @@ const Form = () => {
           ))}
         </select>
       </label>
-      <label>
+      <label className={FeedbackStyle.label}>
         Professor:
-        <select required
+        <select className={FeedbackStyle.select} required
           onChange={handleProfessorChange}
           disabled={selectedSubject === ""}
         >
@@ -93,178 +93,188 @@ const Form = () => {
           ))}
         </select>
       </label>
-      <ul>
+      <ul className={FeedbackStyle.ul}>
         {selectedProfessor && (
-          <li key={selectedProfessor}>
-            <ul>
+          <li className={FeedbackStyle.li} key={selectedProfessor}>
+            <ul className={FeedbackStyle.ul}>
               {subjects
                 .find((subject) => subject.value === selectedSubject)
                 .subjects.map((subject) => (
-                  <li key={subject.subject}>
-                    <label>
+                  <li className={FeedbackStyle.li} key={subject.subject}>
+                    <label className={FeedbackStyle.label}>
                       Was the course {subject} Interesting?
-                      <input
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q1"
                         value="Very Bad"
                         onChange={handleChange}
                       />
-                      <span>Very Bad</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Very Bad</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q1"
                         value="Bad"
                         onChange={handleChange}
                       />
-                      <span>Bad</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Bad</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q1"
                         value="Neutral"
                         onChange={handleChange}
                       />
-                      <span>Neutral</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Neutral</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q1"
                         value="Good"
                         onChange={handleChange}
                       />
-                      <span>Good</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Good</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q1"
                         value="Very Good"
                         onChange={handleChange}
                       />
-                      <span>Very Good</span>
+                      <span className={FeedbackStyle.span}>Very Good</span>
                     </label>
                     <br />
-                    <label>
+                    <label className={FeedbackStyle.label}>
                       Was the professor {selectedProfessor} teaching well?
                       <input
-                      id="q2"
+                      className={FeedbackStyle.q2}
+                      
                         type="radio"
                         name="q2"
                         value="Very Bad"
                         onChange={handleChange}
                       />
-                      <span>Very Bad</span>
+                      <span className={FeedbackStyle.span}>Very Bad</span>
                       <input
-                      id="q2"
+                      className={FeedbackStyle.q2}
+                      
                         type="radio"
                         name="q2"
                         value="Bad"
                         onChange={handleChange}
                       />
-                      <span>Bad</span>
+                      <span className={FeedbackStyle.span}>Bad</span>
                       <input
-                      id="q2"
+                      className={FeedbackStyle.q2}
+                      
                         type="radio"
                         name="q2"
                         value="Neutral"
                         onChange={handleChange}
                       />
-                      <span>Neutral</span>
+                      <span className={FeedbackStyle.span}>Neutral</span>
                       <input
-                      id="q2"
+                      className={FeedbackStyle.q2}
+                      
                         type="radio"
                         name="q2"
                         value="Good"
                         onChange={handleChange}
                       />
-                      <span>Good</span>
+                      <span className={FeedbackStyle.span}>Good</span>
                       <input
-                      id="q2"
+                      className={FeedbackStyle.q2}
+                      
                         type="radio"
                         name="q2"
                         value="Very Good"
                         onChange={handleChange}
                       />
-                      <span>Very Good</span>
+                      <span className={FeedbackStyle.span}>Very Good</span>
                     </label>
                     <br />
-                    <label>
+                    <label className={FeedbackStyle.label}>
                       Was the course {subject} useful?
-                      <input
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q3"
                         value="Very Bad"
                         onChange={handleChange}
                       />
-                      <span>Very Bad</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Very Bad</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q3"
                         value="Bad"
                         onChange={handleChange}
                       />
-                      <span>Bad</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Bad</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q3"
                         value="Neutral"
                         onChange={handleChange}
                       />
-                      <span>Neutral</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Neutral</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q3"
                         value="Good"
                         onChange={handleChange}
                       />
-                      <span>Good</span>
-                      <input
+                      <span className={FeedbackStyle.span}>Good</span>
+                      <input className={FeedbackStyle.input}
                         type="radio"
                         name="q3"
                         value="Very Good"
                         onChange={handleChange}
                       />
-                      <span>Very Good</span>
+                      <span className={FeedbackStyle.span}>Very Good</span>
                     </label>
                     <br />
-                    <label>
+                    <label className={FeedbackStyle.label}>
                       Should the course {subject} be continued?
                       <input
-                      id="q4"
+                      //  className={FeedbackStyle.input}
+                      className={FeedbackStyle.q4}
                         type="radio"
                         name="q4"
                         value="Very Bad"
                         onChange={handleChange}
                       />
-                      <span>Very Bad</span>
+                      <span className={FeedbackStyle.span}>Very Bad</span>
                       <input
-                      id="q4"
+                      //  className={FeedbackStyle.input}
+                      className={FeedbackStyle.q4}
                         type="radio"
                         name="q4"
                         value="Bad"
                         onChange={handleChange}
                       />
-                      <span>Bad</span>
+                      <span className={FeedbackStyle.span}>Bad</span>
                       <input
-                      id="q4"
+                      //  className={FeedbackStyle.input}
+                      className={FeedbackStyle.q4}
                         type="radio"
                         name="q4"
                         value="Neutral"
                         onChange={handleChange}
                       />
-                      <span>Neutral</span>
+                      <span className={FeedbackStyle.span}>Neutral</span>
                       <input
-                      id="q4"
+                      //  className={FeedbackStyle.input}
+                      className={FeedbackStyle.q4}
                         type="radio"
                         name="q4"
                         value="Good"
                         onChange={handleChange}
                       />
-                      <span>Good</span>
-                      <input
-                      id="q4"
+                      <span className={FeedbackStyle.span}>Good</span>
+                      <input 
+                      // className={FeedbackStyle.input}
+                      className={FeedbackStyle.q4}
                         type="radio"
                         name="q4"
                         value="Very Good"
                         onChange={handleChange}
                       />
-                      <span>Very Good</span>
+                      <span className={FeedbackStyle.span}>Very Good</span>
                     </label>
                   </li>
                 ))}
@@ -272,10 +282,10 @@ const Form = () => {
           </li>
         )}
       </ul>
-      <label style={{fontWeight:"bold"}}>Additional Feedback</label>
-      <textarea type="textarea" name="additionalFeedback" onChange={handleChange}/>
+      <label className={FeedbackStyle.label} style={{fontWeight:"bold"}}>Additional Feedback</label>
+      <textarea className={FeedbackStyle.textarea} type="textarea" name="additionalFeedback" onChange={handleChange}/>
       <br />
-      <button disabled={(selectedProfessor==="" || selectedProfessor==="Select Professor") || (selectedSubject==="Select Subject" || selectedSubject==="")} type="submit">Submit</button>
+      <button className={FeedbackStyle.button} disabled={(selectedProfessor==="" || selectedProfessor==="Select Professor") || (selectedSubject==="Select Subject" || selectedSubject==="")} type="submit">Submit</button>
       {(selectedProfessor==="" || selectedProfessor==="Select Professor" || selectedSubject==="Select Subject" || selectedSubject==="") ? <p style={{color:"red"}}>Please select a valid subject and professor</p> : null}
     </form>
   );

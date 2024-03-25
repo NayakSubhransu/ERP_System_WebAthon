@@ -56,7 +56,7 @@ const CourseTable = () => {
 
   return (
     <div className={CourseStudentStyle.courseID}>
-      <h2>Course Table</h2>
+      <h2>Course Registration</h2>
       <label className={CourseStudentStyle.label}>Name:</label>
       <input required className={CourseStudentStyle.input} type="text" value={name} onChange={handleNameChange} />
       <label className={CourseStudentStyle.label}>Roll No:</label>
@@ -92,6 +92,7 @@ const CourseTable = () => {
         <p>Total Contact Hours: {totalContactHours}</p>
       </div>
       <button type='submit' onClick={handleSubmit} className={CourseStudentStyle.button} disabled={(name==="" || rollNo==="")}>Submit</button>
+      {(name==="" || rollNo==="") ? <p style={{color:"red"}}>Please enter a valid Name and Roll No.</p> : null}
     </div>
   );
 };

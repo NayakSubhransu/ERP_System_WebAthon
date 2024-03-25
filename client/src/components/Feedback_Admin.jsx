@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FeedbackStyle from "./Feedback.module.css";
+import FeedbackAdminStyle from "./Feedback.module.css";
 const subjects = [
   {
     label: "Select Subject",
@@ -348,11 +348,11 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={FeedbackAdminStyle.form}>
       <h1>Feedback Response</h1>
-      <label>
+      <label className={FeedbackAdminStyle.label}>
         Subject:
-        <select onChange={handleSubjectChange}>
+        <select className={FeedbackAdminStyle.select} onChange={handleSubjectChange}>
           {subjects.map((subject, index) => (
             <option key={index} value={subject.value}>
               {subject.label}
@@ -360,9 +360,9 @@ const Form = () => {
           ))}
         </select>
       </label>
-      <label>
+      <label className={FeedbackAdminStyle.label}>
         Professor:
-        <select required
+        <select className={FeedbackAdminStyle.select} required
           onChange={handleProfessorChange}
           disabled={selectedSubject === ""}
         >
@@ -373,68 +373,68 @@ const Form = () => {
           ))}
         </select>
       </label>
-      <ul>
+      <ul className={FeedbackAdminStyle.ul}>
         {selectedProfessor && (
-          <li key={selectedProfessor}>
-            <ul>
+          <li className={FeedbackAdminStyle.li} key={selectedProfessor}>
+            <ul className={FeedbackAdminStyle.ul}>
               {subjects
                 .find((subject) => subject.value === selectedSubject)
                 .subjects.map((subject) => (
-                  <li key={subject.subject}>
-                    <label>
+                  <li className={FeedbackAdminStyle.li} key={subject.subject}>
+                    <label className={FeedbackAdminStyle.label}>
                       Was the course {subject} Interesting?
-                     <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).VeryBad}</p>
-                      <span>Very Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).Bad}</p>
-                      <span>Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).Neutral}</p>
-                      <span>Neutral</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).Good}</p>
-                      <span>Good</span>
-                        <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).VeryGood}</p>
-                      <span>Very Good</span>
+                     <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).VeryBad}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).Bad}</p>
+                      <span className={FeedbackAdminStyle.span}>Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).Neutral}</p>
+                      <span className={FeedbackAdminStyle.span}>Neutral</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).Good}</p>
+                      <span className={FeedbackAdminStyle.span}>Good</span>
+                        <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q1"]).VeryGood}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Good</span>
                     </label>
                     <br />
-                    <label>
+                    <label className={FeedbackAdminStyle.label}>
                       Was the professor {selectedProfessor} teaching well?
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).VeryBad}</p>
-                      <span>Very Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).Bad}</p>
-                      <span>Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).Neutral}</p>
-                      <span>Neutral</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).Good}</p>
-                      <span>Good</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).VeryGood}</p>
-                      <span>Very Good</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).VeryBad}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).Bad}</p>
+                      <span className={FeedbackAdminStyle.span}>Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).Neutral}</p>
+                      <span className={FeedbackAdminStyle.span}>Neutral</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).Good}</p>
+                      <span className={FeedbackAdminStyle.span}>Good</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q2"]).VeryGood}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Good</span>
                     </label>
                     <br />
-                    <label>
+                    <label className={FeedbackAdminStyle.label}>
                       Was the course {subject} useful?
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).VeryBad}</p>
-                      <span>Very Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).Bad}</p>
-                      <span>Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).Neutral}</p>
-                      <span>Neutral</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).Good}</p>
-                      <span>Good</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).VeryGood}</p>
-                      <span>Very Good</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).VeryBad}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).Bad}</p>
+                      <span className={FeedbackAdminStyle.span}>Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).Neutral}</p>
+                      <span className={FeedbackAdminStyle.span}>Neutral</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).Good}</p>
+                      <span className={FeedbackAdminStyle.span}>Good</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]["q3"]).VeryGood}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Good</span>
                     </label>
                     <br />
-                    <label>
+                    <label className={FeedbackAdminStyle.label}>
                       Should the course {subject} be continued?
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).VeryBad}</p>
-                      <span>Very Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).Bad}</p>
-                      <span>Bad</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).Neutral}</p>
-                      <span>Neutral</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).Good}</p>
-                      <span>Good</span>
-                      <p>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).VeryGood}</p>
-                      <span>Very Good</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).VeryBad}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).Bad}</p>
+                      <span className={FeedbackAdminStyle.span}>Bad</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).Neutral}</p>
+                      <span className={FeedbackAdminStyle.span}>Neutral</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).Good}</p>
+                      <span className={FeedbackAdminStyle.span}>Good</span>
+                      <p className={FeedbackAdminStyle.p}>{(DUMMY_DATA[selectedSubject][selectedProfessor]['q4']).VeryGood}</p>
+                      <span className={FeedbackAdminStyle.span}>Very Good</span>
                     </label>
                   </li>
                 ))}
@@ -442,14 +442,14 @@ const Form = () => {
           </li>
         )}
       </ul>
-      <label style={{fontWeight:"bold"}}>Additional Feedback</label>
-      <ul>
+      <label className={FeedbackAdminStyle.label} style={{fontWeight:"bold"}}>Additional Feedback</label>
+      <ul className={FeedbackAdminStyle.ul}>
         {selectedProfessor && (
-          <li key={selectedProfessor}>
-            <ul>
+          <li className={FeedbackAdminStyle.li} key={selectedProfessor}>
+            <ul className={FeedbackAdminStyle.ul}>
               {DUMMY_DATA[selectedSubject][selectedProfessor]["additionalFeedback"].map((feedback, index) => (
-                <li key={index} style={{ display: "list-item" }}>
-                  <label style={{display:"block"}}>
+                <li className={FeedbackAdminStyle.li} key={index} style={{ display: "list-item" }}>
+                  <label className={FeedbackAdminStyle.label} style={{display:"block"}}>
                     {index+1}-{feedback}
                   </label>
                 </li>
