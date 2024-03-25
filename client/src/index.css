@@ -11,3 +11,99 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+/* 
+<li key={subject}>
+                    <label>
+                       Was the course {subject} Interesting?
+                    
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>1</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>2</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>3</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>4</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>5</span>
+                    </label>
+<br></br>
+                    <label>
+                       Was the professor {selectedProfessor} teaching well?
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>1</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>2</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>3</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>4</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>5</span>
+                    </label>
+                    <br />
+                    <label>
+                       Was the course {subject} useful?
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>1</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>2</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>3</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>4</span>
+                    <input
+                      type="radio"
+                      name={subject}
+                    />
+                    <span>5</span>
+                    </label>
+
+
+                  </li> */
