@@ -1,4 +1,4 @@
-// import LoginPage from "./components/LoginPage/LoginPage.jsx"
+import LoginPage from "./components/LoginPage/LoginPage.jsx"
 import Grading from "./components/Grading/grading.jsx";
 function App() {
   return (

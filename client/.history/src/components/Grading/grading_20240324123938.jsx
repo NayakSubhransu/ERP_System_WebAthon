@@ -4,7 +4,7 @@ export default function Grading(){
 
     const[toggle,setToggle] = React.useState(1);
     
-    let admin = true;
+    let admin = false;
 
     const array = [
         {
@@ -113,7 +113,7 @@ export default function Grading(){
                 {
                     array.map((item)=>(
 
-                        
+                        item.done ?
                         <div className="arraycontents" style={
                             { ...green, '@media screen and (max-width: 520px)': mediaQueryStyle }
                         }>
@@ -122,7 +122,15 @@ export default function Grading(){
                             <p className="contents">{item.city}</p>
                             <p className="contents">{item.occupation}</p>
                         </div>
-                        
+                        : 
+                        <div className="arraycontents" style={
+                            { ...red, '@media screen and (max-width: 520px)': mediaQueryStyle }
+                        }>
+                            <p className="contents">{item.name}</p>
+                            <p className="contents">{item.age}</p>
+                            <p className="contents">{item.city}</p>
+                            <p className="contents">{item.occupation}</p>
+                        </div>
                     ))
                 }
             </div>

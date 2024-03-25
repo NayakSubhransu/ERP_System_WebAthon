@@ -4,7 +4,7 @@ export default function Grading(){
 
     const[toggle,setToggle] = React.useState(1);
     
-    let admin = true;
+    let admin = true
 
     const array = [
         {
@@ -44,7 +44,6 @@ export default function Grading(){
         city: "New York",
         occupation: "Software Engineer"
     }];
-
     const green = {
         backgroundImage:'linear-gradient(to right, #56ff56, #ffffff)',
         //background: '#abe2f6',
@@ -94,11 +93,9 @@ export default function Grading(){
                 <button className="navbut"  onClick={() => setToggle(1)}>
                     Assignment
                 </button>
-
                 <button className="navbut" onClick={() => setToggle(2)}>
                     Heading 2
                 </button>
-
                 <button className="navbut" onClick={() => setToggle(3)}>
                     Heading 3
                 </button>
@@ -113,7 +110,7 @@ export default function Grading(){
                 {
                     array.map((item)=>(
 
-                        
+                        item.done ?
                         <div className="arraycontents" style={
                             { ...green, '@media screen and (max-width: 520px)': mediaQueryStyle }
                         }>
@@ -122,7 +119,15 @@ export default function Grading(){
                             <p className="contents">{item.city}</p>
                             <p className="contents">{item.occupation}</p>
                         </div>
-                        
+                        : 
+                        <div className="arraycontents" style={
+                            { ...red, '@media screen and (max-width: 520px)': mediaQueryStyle }
+                        }>
+                            <p className="contents">{item.name}</p>
+                            <p className="contents">{item.age}</p>
+                            <p className="contents">{item.city}</p>
+                            <p className="contents">{item.occupation}</p>
+                        </div>
                     ))
                 }
             </div>
@@ -142,10 +147,7 @@ export default function Grading(){
         </div>
         :undefined
 
-        : 
-            <div>
-                <h1> You are not an admin</h1>
-            </div>
+        : undefined
         
         }
         </div>
