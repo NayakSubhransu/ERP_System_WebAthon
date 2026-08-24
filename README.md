@@ -1,42 +1,42 @@
 
-# 🎓 GC Webathon 2023  -  ERP System
+# GC Webathon 2023  -  ERP System
 
 An **all-in-one Enterprise Resource Planning (ERP) platform** architected for academic institutions to bridge students, faculty, and administrative staff across **course registration, attendance tracking, feedback cycles, grade distribution, student management, and campus resource management**.
 
 ---
 
-## 🚀 Key Highlights & Modules
+## Key Highlights & Modules
 
 ### 🎓 Student Portal
 
-#### 👤 Student Profile Dashboard
+####  Student Profile Dashboard
 - Detailed student records
 - Personal information management
 - Emergency contact details
 - Academic history
 
-#### 📚 Course Registration
+#### Course Registration
 - Interactive semester enrollment dashboard
 - Register for available courses
 - Monitor registered courses
 - View assigned courses
 
-#### 📊 Attendance Tracker
+#### Attendance Tracker
 - Real-time attendance visibility
 - Subject-wise attendance records
 - Attendance tracking across registered courses
 
-#### 📝 Feedback Collection
+#### Feedback Collection
 - Standardized feedback forms
 - Course and instructor reviews
 - Student feedback submission workflow
 
-#### 🎯 Grades & Evaluation
+#### Grades & Evaluation
 - View published academic results
 - GPA and academic performance indicators
 - Term-wise evaluation records
 
-#### 🏸 SAC Equipment Request Desk
+#### SAC Equipment Request Desk
 - Request sports and laboratory equipment
 - Issue equipment through SAC workflow
 - Track equipment returns
@@ -46,23 +46,23 @@ An **all-in-one Enterprise Resource Planning (ERP) platform** architected for ac
 
 ### 🛠️ Administrative & Faculty Portal
 
-#### 📊 Attendance Manager
+#### Attendance Manager
 - Record student attendance
 - Update attendance logs
 - Manage attendance by course and section
 
-#### 📚 Course Administration
+#### Course Administration
 - Add and edit courses
 - Manage course catalogs
 - Configure prerequisites
 - Manage student enrollments
 
-#### 📈 Feedback Analytics
+#### Feedback Analytics
 - Monitor student feedback submissions
 - Aggregate course and instructor feedback
 - Support academic quality audits
 
-#### 📦 Inventory & Equipment Management
+#### Inventory & Equipment Management
 - Manage SAC inventory
 - Authorize equipment check-outs
 - Track pending returns
@@ -70,7 +70,7 @@ An **all-in-one Enterprise Resource Planning (ERP) platform** architected for ac
 
 ---
 
-# 🏗️ System Architecture
+# System Architecture
 
 ```text
 ERP_System_For_WebAthon/
@@ -124,7 +124,7 @@ ERP_System_For_WebAthon/
 
 ---
 
-# 🧰 Tech Stack
+# Tech Stack
 
 | Layer                 | Technology                       |
 | --------------------- | -------------------------------- |
@@ -140,7 +140,7 @@ ERP_System_For_WebAthon/
 
 ---
 
-# ⚡ Quickstart Guide
+# Quickstart Guide
 
 ## Prerequisites
 
@@ -221,9 +221,9 @@ http://localhost:5173
 
 ---
 
-# 🔌 API Documentation
+# API Documentation
 
-## 📚 Course Endpoints
+## Course Endpoints
 
 ### Base Route
 
@@ -239,7 +239,7 @@ http://localhost:5173
 
 ---
 
-## 👨‍🎓 Student Endpoints
+## Student Endpoints
 
 ### Base Route
 
@@ -303,7 +303,7 @@ http://localhost:5173
 
 ---
 
-# 🤝 Contributing
+# Contributing
 
 Contributions are welcome and appreciated.
 
@@ -335,13 +335,12 @@ Open a Pull Request with a clear description of the changes and improvements.
 
 ---
 
-# 🌟 Project Overview
+# Project Overview
 
 The **GC Webathon 2023 ERP System** provides a centralized academic management platform that brings together student services, faculty operations, and administrative workflows into a single web application.
 
 The system demonstrates a full-stack architecture using **React + Vite on the frontend, Node.js + Express.js for backend REST APIs, and MongoDB + Mongoose for data persistence**.
 
-```
 
 
 
