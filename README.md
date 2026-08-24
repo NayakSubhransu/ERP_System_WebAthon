@@ -1,5 +1,5 @@
 
-# 🎓 GC Webathon 2023 — ERP System
+# 🎓 GC Webathon 2023  -  ERP System
 
 An **all-in-one Enterprise Resource Planning (ERP) platform** architected for academic institutions to bridge students, faculty, and administrative staff across **course registration, attendance tracking, feedback cycles, grade distribution, student management, and campus resource management**.
 
